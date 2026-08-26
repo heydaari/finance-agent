@@ -1,0 +1,16 @@
+[project]
+name = "assessment"
+version = "0.1.0"
+description = "Persian-language finance and cryptocurrency Q&A assistant"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "faiss-cpu>=1.15.0",
+    "fastapi>=0.141.1",
+    "google-genai>=2.17.0",
+    "langchain-community>=0.4.2",
+    "langchain-huggingface>=1.2.2",
+    "numpy>=2.5.1",
+    "python-dotenv>=1.2.2",
+    "uvicorn>=0.52.1",
+]

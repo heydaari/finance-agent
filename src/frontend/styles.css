@@ -1,0 +1,46 @@
+:root { color-scheme: dark; --bg: #212121; --sidebar: #171717; --surface: #2f2f2f; --muted: #a7a7a7; --text: #ececec; --accent: #19c37d; --border: #444; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 18px/1.8 "B Nazanin", Nazanin, Tahoma, Arial, ui-sans-serif, system-ui, sans-serif; }
+.app-shell { display: flex; min-height: 100vh; }
+.sidebar { width: 260px; background: var(--sidebar); padding: 18px 14px; display: flex; flex-direction: column; gap: 18px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 650; font-size: 16px; padding: 4px 8px; }
+.brand-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--accent); color: #062d1f; font-size: 11px; font-weight: 800; }
+.new-chat { border: 1px solid #555; border-radius: 8px; background: transparent; color: var(--text); padding: 10px 12px; text-align: right; cursor: pointer; }
+.new-chat:hover, .suggestions button:hover { background: #2b2b2b; }
+.sidebar-note { color: var(--muted); font-size: 13px; padding: 4px 8px; }
+.sidebar-footer { margin-top: auto; color: #777; font-size: 12px; padding: 8px; }
+.chat-panel { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.topbar { height: 58px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #303030; padding: 0 24px; color: #d5d5d5; }
+.status-dot { color: var(--accent); font-size: 12px; }
+.messages { flex: 1; width: min(900px, 100%); margin: 0 auto; padding: 42px 24px 140px; }
+.welcome { text-align: center; margin: 10vh auto 0; max-width: 650px; }
+.welcome-icon { color: var(--accent); font-size: 30px; }
+.welcome h1 { font-size: 28px; margin: 12px 0 8px; }
+.welcome p { color: var(--muted); margin: 0 auto 28px; }
+.suggestions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.suggestions button { background: var(--surface); border: 1px solid var(--border); border-radius: 9px; color: var(--text); padding: 13px; text-align: right; cursor: pointer; }
+.message { display: flex; gap: 14px; margin: 26px 0; }
+.avatar { flex: 0 0 30px; height: 30px; display: grid; place-items: center; border-radius: 8px; font-size: 11px; font-weight: 700; }
+.message.user .avatar { background: #5d5d5d; }
+.message.assistant .avatar { background: var(--accent); color: #062d1f; }
+.message-body { min-width: 0; overflow-wrap: anywhere; }
+.message-body p { margin: 0 0 12px; }
+.message-body p:last-child { margin-bottom: 0; }
+.message-body strong { color: #fff; }
+.message-body code { background: #161616; padding: 2px 5px; border-radius: 4px; }
+.message-body ul { margin-top: 6px; }
+.tool-status { color: var(--muted); font-size: 13px; font-style: italic; }
+.sources-panel { width: min(850px, calc(100% - 44px)); margin: -12px auto 28px; border: 1px solid var(--border); border-radius: 9px; background: #282828; color: var(--muted); font-size: 14px; }
+.sources-panel summary { padding: 9px 12px; cursor: pointer; color: #d8d8d8; }
+.sources-panel summary::marker { color: var(--accent); }
+.sources-panel ol { margin: 0; padding: 0 34px 14px 18px; }
+.sources-panel li { padding: 8px 0; border-top: 1px solid #3a3a3a; }
+.sources-panel code { color: #aee9cf; direction: ltr; unicode-bidi: embed; }
+.sources-panel p { margin: 3px 0 0; line-height: 1.65; }
+.composer { position: fixed; bottom: 0; right: 260px; left: 0; margin: auto; padding: 18px 24px 16px; background: linear-gradient(transparent, var(--bg) 25%); }
+.composer textarea { display: block; width: min(850px, 100%); margin: 0 auto; resize: none; border: 1px solid #555; border-radius: 14px; background: var(--surface); color: var(--text); padding: 14px 16px 14px 52px; outline: none; font: inherit; box-shadow: 0 2px 12px #0004; text-align: right; }
+.composer textarea:focus { border-color: #777; }
+.composer button { position: absolute; left: max(calc((100% - 850px) / 2 + 10px), 34px); bottom: 45px; width: 32px; height: 32px; border: 0; border-radius: 8px; background: #eee; color: #222; font-size: 20px; cursor: pointer; }
+.composer button:disabled { opacity: .5; cursor: default; }
+.composer-hint { text-align: center; color: #777; font-size: 11px; margin-top: 7px; }
+@media (max-width: 700px) { .sidebar { display: none; } .composer { right: 0; } .suggestions { grid-template-columns: 1fr; } .messages { padding-inline: 16px; } .topbar { padding-inline: 16px; } }

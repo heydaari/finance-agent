@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>دستیار فایننس</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="brand-mark">₿</span><span>فایننس‌یار</span></div>
+        <button id="new-chat" class="new-chat">＋ گفت‌وگوی جدید</button>
+        <div class="sidebar-note">پرسش‌وپاسخ فارسی، مبتنی بر دانش‌نامه محلی فایننس و کریپتو.</div>
+        <div class="sidebar-footer">Finance & Crypto Knowledge Base</div>
+      </aside>
+      <main class="chat-panel">
+        <header class="topbar"><span>دستیار فایننس و کریپتو</span><span class="status-dot">● آماده پاسخ‌گویی</span></header>
+        <section id="messages" class="messages">
+          <div class="welcome">
+            <div class="welcome-icon">✦</div>
+            <h1>درباره فایننس و کریپتو چه می‌خواهید بدانید؟</h1>
+            <p>مفاهیم تحلیل تکنیکال، فاندامنتال، مدیریت ریسک و بلاک‌چین را به فارسی بپرسید.</p>
+            <div class="suggestions">
+              <button>شاخص RSI چگونه استفاده می‌شود؟</button>
+              <button>تحلیل تکنیکال و فاندامنتال چه تفاوتی دارند؟</button>
+              <button>چطور برای معامله حد ضرر تعیین کنم؟</button>
+            </div>
+          </div>
+        </section>
+        <form id="composer" class="composer">
+          <textarea id="query" rows="1" placeholder="پیام خود را بنویسید..." required></textarea>
+          <button id="send" type="submit" aria-label="Send">↑</button>
+          <div class="composer-hint">این پاسخ‌ها آموزشی‌اند، نه توصیه سرمایه‌گذاری. پیش از تصمیم مالی تحقیق کنید.</div>
+        </form>
+      </main>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
