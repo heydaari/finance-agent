@@ -57,9 +57,9 @@ Create a `.env` file in the project root:
 
 ```env
 GEMINI_API_KEY=your_google_ai_studio_key
-GEMINI_MODEL=gemini-2.5-flash-lite
+GEMINI_MODEL=gemini-3.5-flash-lite
 HF_TOKEN=your_huggingface_token
-EMBEDDING_MODEL=sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+EMBEDDING_MODEL=heydariAI/persian-embedding-v2
 RETRIEVAL_ENDPOINT=http://127.0.0.1:8000/search
 ```
 
